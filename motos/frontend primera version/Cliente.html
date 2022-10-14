@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="JavaScript/myScript.js"></script>
+</head>
+
+<body>
+
+    <a href="index.html" >Retorno Menu Inicio</a>
+    
+    <h1>Cliente</h1>
+    <h3>Seleccione opcion deseada</h3>
+    <br>
+    <table>
+        <tr>
+            <td><b>NOMBRE: </b></td>
+            <td><Input id="ClienteNombre" type="text"></Input></td>
+        </tr>
+        <tr>
+            <td><b>EMAIL: </b></td>
+            <td><Input id="ClienteEmail" type="text"></Input></td>
+        </tr>
+        <tr>
+            <td><b>EDAD: </b></td>
+            <td><Input id="ClienteEdad" type="number"></Input></td>
+        </tr>
+    </table>
+    <br>
+    <div id="Botones">
+        <button onclick="leerClientes()">Consultar</button>
+        <button onclick="guardarClientes()">Registrar</button>
+    </div>
+    <br>
+    <div id="ClienteContenido"> </div>
+    <br>
+</body>
+
+</html>
