@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/misFuncionesReport.js"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"crossorigin="anonymous">
+    
+        <title>Reportes</title>
+    </head>
+
+    <body>
+        <canvas></canvas>
+        <div style="color: #fff; font-size: 18px;">
+            Logged in as: <span id="user"></span>
+        </div>
+        <div id="logo" style="margin-left: 500px; margin-top: 30px; color: #fff;">
+            <h1>RENTAL MOTORBIKES</h1>
+        </div>
+        <header class="header">
+            <div class="container">
+                <div class="btn-menu">
+                    <label for="btn-menu" class="glyphicon glyphicon-eye-open"></label>
+                </div>
+                 <nav class="menu">
+                     <a href="../home/home.html">Inicio</a>
+                     <a href="#">Nosotros</a>
+                     <a href="#">Blog</a>
+                     <a href="#">Contacto</a>
+                 </nav>
+            </div> 
+        </header>
+        <div class="capa"></div>
+        <input type="checkbox" id="btn-menu"><!-- comment -->
+        <div class="container-menu">
+            <div class="cont-menu">
+                <nav>
+                    <a href="../home/home.html">Inicio</a>
+                    <a href="../admin/admin.html">Administradores</a>
+                    <a href="../admin/Category.html">Categorias</a>
+                    <a href="../admin/Motorbike.html">Motorbikes</a>
+                    <a href="../admin/Client.html">Clientes</a>
+                    <a href="../admin/Message.html">Mensajes</a>
+                    <a href="../admin/Reservation.html">Reservaciónes</a>
+                    <a href="../admin/Score.html">Calificaciónes</a>
+                    <a href="../admin/Report.html">Reporte</a>
+                </nav>
+                <label for="btn-menu" class="glyphicon glyphicon-eye-close"></label>
+            </div>
+        </div>   
+        <section>
+            <div class="contact-wrapper" style="margin-top: 100px" >
+                <div class="contact-form">
+                    <h3>Reporte</h3>
+                    <form  id="formReporte" name="formReporte" action="javascript:mensaje('formReporte')">
+                        <p>
+                            <label for="inicialDate">fecha Inicial:</label>
+                            <input type="date" name="inicialDate" id="inicialDate" required>
+                        </p>
+                        <p>
+                            <label for="finalDate">fecha Final:</label>
+                            <input type="date" name="finalDate" id="finalDate" required>
+                        </p>
+                    </form>
+                    <div class="block">               
+                        <button type="submit" class="btn btn-info btn-lg btn-responsive" onclick="traerInformacionReporteFechas()"><span class="glyphicon glyphicon-saved"></span>Consulta por Fechas</button>
+                        <button type="submit" class="btn btn-info btn-lg btn-responsive" onclick="traerInformacionReporteClient()"><span class="glyphicon glyphicon-saved"></span>Consulta Clientes</button>
+                        <button type="submit" class="btn btn-info btn-lg btn-responsive" onclick="traerInformacionReporteStatus()"><span class="glyphicon glyphicon-saved"></span>Consulta por Estado</button>
+                    </div>
+                </div>
+                <div class="contact-info"> 
+                    <h3>Reportes</h3>
+                    <table>
+                        <tbody id="resultadoReporteF"></tbody>
+                    </table>
+                    <table>
+                        <tbody id="resultadoReporteC"></tbody>
+                    </table>
+                    <table>
+                        <tbody id="resultadoReporteS"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/misFuncionesMotorbike.js"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"crossorigin="anonymous">
+    
+        <title>Motorbike</title>
+    </head>
+
+    <body>
+        <canvas></canvas>
+        <div style="color: #fff; font-size: 18px;">
+            Logged in as: <span id="user"></span>
+        </div>
+        <div id="logo" style="margin-left: 500px; margin-top: 30px; color: #fff;">
+            <h1>RENTAL MOTORBIKES</h1>
+        </div>
+        <header class="header">
+            <div class="container">
+                <div class="btn-menu">
+                    <label for="btn-menu" class="glyphicon glyphicon-eye-open"></label>
+                </div>
+                 <nav class="menu">
+                     <a href="../home/home.html">Inicio</a>
+                     <a href="#">Nosotros</a>
+                     <a href="#">Blog</a>
+                     <a href="#">Contacto</a>
+                 </nav>
+            </div> 
+        </header>
+        <div class="capa"></div>
+        <input type="checkbox" id="btn-menu"><!-- comment -->
+        <div class="container-menu">
+            <div class="cont-menu">
+                <nav>
+                    <a href="../home/home.html">Inicio</a>
+                    <a href="../admin/admin.html">Administradores</a>
+                    <a href="../admin/Category.html">Categorias</a>
+                    <a href="../admin/Motorbike.html">Motorbikes</a>
+                    <a href="../admin/Client.html">Clientes</a>
+                    <a href="../admin/Message.html">Mensajes</a>
+                    <a href="../admin/Reservation.html">Reservaciónes</a>
+                    <a href="../admin/Score.html">Calificaciónes</a>
+                    <a href="../admin/Report.html">Reporte</a>
+                </nav>
+                <label for="btn-menu" class="glyphicon glyphicon-eye-close"></label>
+            </div>
+        </div>   
+        <section>
+            <div class="contact-wrapper" style="margin-top: 100px" >
+                <div class="contact-form">
+                    <h3>Motorbike</h3>
+                    <form  id="formotorbikes" name="formotorbike" action="javascript:mensaje('formotorbikes')">
+                        <p>
+                            <label for="resultadoC">Categoria:</label>
+                            <select name="resultadoC" id="resultadoC" required>
+                                <option>Seleccionar</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="nameMotorbike">Nombre:</label>
+                            <input type="text" name="nameMotorbike" id="nameMotorbike" required maxlength="45">
+                        </p>
+                        <p>
+                            <label for="brand">Marca:</label>
+                            <input type="text" name="brand" id="brand" required maxlength="45">
+                        </p>
+                        <p>
+                            <label for="description">Descripcion:</label>
+                            <input type="text" name="description" id="description" required maxlength="250">
+                        </p>
+                        <p>
+                            <label for="year">Año del Modelo:</label>
+                            <input type="number" name="year" id="year" required min="1" max="60">
+                        </p>
+                    </form>
+                    <div class="block">
+                        <button type="submit" class="btn btn-info btn-lg btn-responsive" onclick="guardarElementoMotorbike()"><span class="glyphicon glyphicon-saved"></span>Agregar</button>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <h3>Motorbikes</h3>
+                    <div id="resultadoMotorbike">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    <script type="text/javascript">$.get("/user", function (data) {$("#user").html(data.name);$(".unauthenticated").show();$(".authenticated").show();});</script>
+    <script type="text/javascript">$.get("/user", function (data) {$("#user").html(data.name);});</script>
+</html>

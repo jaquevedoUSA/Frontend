@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <title>Motorcycle rental</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    </head>
+    <body>
+
+        <div class="container-fluid mb-0 p-0">
+
+            <!--========================================================== -->
+            <!-- ENCABEZADO -->
+            <!--========================================================== -->
+            <header class="container-fluid bg-secondary d-flex justify-content-center">
+                <p class="text-light mb-0 p-2 fs-6">Contactanos 1-(305)-725-1000</p>
+            </header>
+
+            <nav class="navbar navbar-expand-lg navbar-light p-3" id="menu">
+                <div class="container">
+                    <a class="navbar-brand" href="../cliente/cliente.html">
+                        <span class="fs-3 text-secondary fw-bold">Motorcycle rental</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../home/home.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="clienteRegistro.html">Registrarse</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="clienteMoto.html">Consultar motocicletas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="clienteCategoria.html">Consultar categorias</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="clienteMensajes.html">Ver comentarios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="clienteScore.html">Mis reservas</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <!--========================================================== -->
+            <!-- CONTENIDO-->
+            <!--========================================================== -->
+
+
+            <section class="container-lg text-center" id="content">
+
+                <div id="descrip">
+                    <h1 class="m-0 pt-3 pb-3 fs-2 border-top border-3">
+                        Registro Cliente
+                    </h1>
+
+                    <p class="m-0 pt-3 pb-3 fs-4">
+                        <span class="text-secondary">Motorcycle rental </span>
+                        te invita a que realices tu registro en nuestro sistema. 
+                        Por favor llena todos los campos y envia el formulario
+                    </p>
+                </div>
+
+                <br>
+
+                <div id="formulario">
+                    <form class="justify-content-center align-items-center w-25 mx-auto" id="formCliente" action="javascript:guardarClientes('formCliente')">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label" >Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Juan Quevedo" autocomplete="off" maxlength="250" required tabindex="1">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="edad" class="form-label" >Edad</label>
+                            <input type="number" min="0" max="99" class="form-control" id="edad" placeholder="25" autocomplete="off" maxlength="250" required tabindex="2">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label ">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" autocomplete="off" maxlength="45" required tabindex="3">
+                        </div>
+
+                        <div class="mb-3" id="confirmemail" onclick="ocultarAlertaEmail()">
+                            <label for="cemail" class="form-label ">Confirmar correo electrónico</label>
+                            <input type="email" class="form-control" id="cemail" placeholder="nombre@ejemplo.com" autocomplete="off" maxlength="45" required tabindex="4">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="pass" class="form-label" >Contraseña</label>
+                            <input type="password" class="form-control" id="pass" autocomplete="off" maxlength="250" required tabindex="5">
+                        </div>
+
+                        <div class="mb-3" id="confirmpassw" onclick="ocultarAlertaPass()">
+                            <label for="cpass" class="form-label" >Confirmar contraseña</label>
+                            <input type="password" class="form-control" id="cpass" autocomplete="off" maxlength="250" required tabindex="6">
+                        </div>
+
+                        <button class="btn btn-outline-success" type="submit" tabindex="7">Registrarme</button>
+                    </form>
+                </div>
+                <br>
+
+            </section> 
+
+
+            <!--========================================================== -->
+            <!--FOOTER-->
+            <!--========================================================== -->
+
+
+            <footer class="bg-secondary w-100  d-flex  align-items-center justify-content-center flex-wrap">
+                <p class="fs-5 px-3  pt-3">Motorcycle rental &copy; Todos Los Derechos Reservados 2021</p>
+                <div id="iconos">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                </div>
+            </footer>
+
+        </div>
+
+
+        <!--========================================================== -->
+        <!-- Funciones -->
+        <!--========================================================== -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="../../js/funcionesClienteRegistro.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    </body>
+</html>
