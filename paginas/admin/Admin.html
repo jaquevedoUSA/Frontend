@@ -20,7 +20,7 @@
             Logged in as: <span id="user"></span>
         </div>
         <div id="logo" style="margin-left: 500px; margin-top: 30px; color: #fff; ">
-            <h1>RENTAL MOTORBIKES</h1>
+            <h1>MOTORBIKES RENTAL</h1>
         </div>
         <div>
             <header class="header">
@@ -42,7 +42,7 @@
             <div class="cont-menu">
                 <nav>
                     <a href="../home/home.html">Inicio</a>
-                    <a href="../admin/admin.html">Administradores</a>
+                    <a href="../admin/Admin.html">Administradores</a>
                     <a href="../admin/Category.html">Categorias</a>
                     <a href="../admin/Motorbike.html">Motorbikes</a>
                     <a href="../admin/Client.html">Clientes</a>
@@ -58,7 +58,7 @@
             <div class="contact-wrapper" style="margin-top: 70px;" >
             <div class="contact-form">
                 <h3>Administrador</h3>
-                <form  id="formAdmin" name="formAdmin" action="javascript:mensaje('formAdmin')">
+                <form  id="formAdmin" name="formAdmin" action="javascript:guardarElementoAdmin('formAdmin')">
                     <p>
                         <label for="nameAdmin">Nombre:</label>
                         <input type="text" name="nameAdmin" id="nameAdmin" required maxlength="45">
@@ -69,13 +69,15 @@
                     </p>
                     <p>
                         <label for="password">Contraseña:</label>
-                        <input type="password" name="password" id="password" required value=notnull>
+                        <input type="password" name="password" id="password" required>
                     </p>
-                    
+                    <br>
+                    <div class="block">
+                        <button type="submit" class="btn btn-info btn-lg btn-responsive"> <span class="glyphicon glyphicon-saved"></span>Agregar</button>                 
+                   </div>
+
                 </form>
-                <div class="block">
-                     <button type="submit" class="btn btn-info btn-lg btn-responsive" onclick="guardarElementoAdmin()"> <span class="glyphicon glyphicon-saved"></span>Agregar</button>                 
-                </div>
+               
             </div>
             <div class="contact-info">
                 <h3>Administradores</h3>

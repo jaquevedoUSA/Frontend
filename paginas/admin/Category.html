@@ -20,7 +20,7 @@
             Logged in as: <span id="user"></span>
         </div>
         <div id="logo" style="margin-left: 500px; margin-top: 30px; color: #fff;">
-            <h1>RENTAL MOTORBIKES</h1>
+            <h1>MOTORBIKES RENTAL</h1>
         </div>
         <div>
             <header class="header">
@@ -42,7 +42,7 @@
             <div class="cont-menu">
                 <nav>
                     <a href="../home/home.html">Inicio</a>
-                    <a href="../admin/admin.html">Administradores</a>
+                    <a href="../admin/Admin.html">Administradores</a>
                     <a href="../admin/Category.html">Categorias</a>
                     <a href="../admin/Motorbike.html">Motorbikes</a>
                     <a href="../admin/Client.html">Clientes</a>
@@ -58,7 +58,7 @@
             <div class="contact-wrapper" style="margin-top: 100px" >
                 <div class="contact-form">
                     <h3>Categoria</h3>
-                    <form  id="formCategory" name="formCategory" action="javascript:mensaje('formCategory')">
+                    <form  id="formCategory" name="formCategory" action="javascript:guardarElementoCategory('formCategory')">
                         <p>
                             <label for="nameCategory">Nombre:</label>
                             <input type="text" name="nameCategory" id="nameCategory" required maxlength="45">
@@ -67,10 +67,11 @@
                             <label for="description">Descripcion:</label>
                             <input type="text" name="description" id="description" required maxlength="250">
                         </p>
+                        <div class="block">
+                            <button  id="search"> <span class="glyphicon glyphicon-saved"></span>Agregar</button>                 
+                        </div>
                     </form>
-                    <div class="block">
-                        <button onclick="guardarElementoCategory()" id="search"> <span class="glyphicon glyphicon-saved"></span>Agregar</button>                 
-                    </div>
+                  
                 </div>
                 <div class="contact-info">
                     <h3>Categorias</h3>

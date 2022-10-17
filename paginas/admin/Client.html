@@ -20,7 +20,7 @@
             Logged in as: <span id="user"></span>
         </div>
         <div id="logo" style="margin-left: 500px; margin-top: 30px; color: #fff;">
-            <h1>RENTAL MOTORBIKES</h1>
+            <h1>MOTORBIKES RENTAL</h1>
         </div>
         <header class="header">
             <div class="container">
@@ -41,7 +41,7 @@
             <div class="cont-menu">
                 <nav>
                     <a href="../home/home.html">Inicio</a>
-                    <a href="../admin/admin.html">Administradores</a>
+                    <a href="../admin/Admin.html">Administradores</a>
                     <a href="../admin/Category.html">Categorias</a>
                     <a href="../admin/Motorbike.html">Motorbikes</a>
                     <a href="../admin/Client.html">Clientes</a>
@@ -57,7 +57,7 @@
             <div class="contact-wrapper" style="margin-top: 100px" >
                 <div class="contact-form">
                     <h3>Cliente</h3>
-                    <form  id="formCliente" name="formCliente" action="javascript:mensaje('formCliente')">
+                    <form  id="formCliente" name="formCliente" action="javascript:guardarElementoClient('formCliente')">
                         <p>
                             <label for="nameClient">Nombre:</label>
                             <input type="text" name="nameClient" id="nameClient" required maxlength="45">
@@ -68,17 +68,17 @@
                         </p>
                         <p>
                             <label for="age">Edad:</label>
-                            <input type="number" name="age" id="age" required>
+                            <input type="number" min="15" max="70" name="age" id="age" required>
                         </p>
                         <p>
                             <label for="password">Contraseña:</label>
                             <input type="password" name="password" id="password" required>
                         </p>
-
+                        <div class="block">               
+                            <button type="submit" class="btn btn-info btn-lg btn-responsive"><span class="glyphicon glyphicon-saved"></span>Agregar</button>
+                        </div>
                     </form>
-                    <div class="block">               
-                        <button type="submit" class="btn btn-info btn-lg btn-responsive" onclick="guardarElementoClient()"><span class="glyphicon glyphicon-saved"></span>Agregar</button>
-                    </div>
+                   
                 </div>
                 <div class="contact-info"> 
                     <h3>Clientes</h3>

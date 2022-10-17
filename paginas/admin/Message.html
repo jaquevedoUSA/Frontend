@@ -20,7 +20,7 @@
             Logged in as: <span id="user"></span>
         </div>
         <div id="logo" style="margin-left: 500px; margin-top: 30px; color: #fff;">
-            <h1>RENTAL MOTORBIKES</h1>
+            <h1>MOTORBIKES RENTAL</h1>
         </div>
         <header class="header">
             <div class="container">
@@ -41,7 +41,7 @@
             <div class="cont-menu">
                 <nav>
                     <a href="../home/home.html">Inicio</a>
-                    <a href="../admin/admin.html">Administradores</a>
+                    <a href="../admin/Admin.html">Administradores</a>
                     <a href="../admin/Category.html">Categorias</a>
                     <a href="../admin/Motorbike.html">Motorbikes</a>
                     <a href="../admin/Client.html">Clientes</a>
@@ -57,7 +57,7 @@
             <div class="contact-wrapper" style="margin-top: 100px">
                 <div class="contact-form">
                     <h3>Mensaje</h3>
-                    <form  id="formMessage" name="formMessage" action="javascript:Message('formMessage')">
+                    <form  id="formMessage" name="formMessage" action="javascript:guardarElementoMessage('formMessage')">
                         <p>
                             <label for="resultadoC">Cliente:</label>
                             <select name="resultadoC" id="resultadoC" required>
@@ -74,10 +74,11 @@
                             <label for="messageText">Mensaje:</label>
                             <textarea name="messageText" id="messageText" rows="3" required maxlength="250"></textarea>
                         </p>
+                        <div class="block">
+                            <button type="submit" class="btn btn-info btn-lg btn-responsive"><span class="glyphicon glyphicon-saved"></span>Agregar</button>
+                        </div>
                     </form>
-                    <div class="block">
-                        <button type="submit" class="btn btn-info btn-lg btn-responsive" onclick="guardarElementoMessage()"><span class="glyphicon glyphicon-saved"></span>Agregar</button>
-                    </div>
+                    
                 </div>
                 <div class="contact-info">
                     <h3>Mensajes</h3>

@@ -32,12 +32,7 @@ const main = () =>{
     };
     matrix(); setInterval(matrix, 15);
 }; document.addEventListener('DOMContentLoaded', main);
-//Funcion para traer el usuario de git
-$.get("/user", function (data) {
-    $("#user").html(data.name);
-    $(".unauthenticated").hide();
-    $(".authenticated").show();
-});
+
 var logout = function () {
     $.post("/logout", function () {
         $("#user").html('');
@@ -103,7 +98,7 @@ function guardarElementoClient(){
         },
         error: function(jqXHR, textStatus, errorThrown) {
               window.location.reload();
-            alert("Cliente no se guardo correctamente");
+            alert("Cliente no se guardo correctamente o email registrado con anterioridad");
         }
         });
 }
